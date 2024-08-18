@@ -3,21 +3,21 @@ import asyncio
 
 async def get_ip_address_from_discord_id(discord_id: str) -> str:
     """
-    Function to retrieve the IP address associated with a Discord user ID.
+    DiscordのユーザーIDに関連付けられたIPアドレスを取得する機能
 
-    Parameters:
+    パラメータ:
     - discord_id: str
-        The Discord user ID for which the IP address is to be fetched.
+        IP アドレスを取得する Discord ユーザー ID
 
-    Returns:
+    戻り値:
     - str
-        The IP address associated with the provided Discord user ID.
+        提供された Discord ユーザー ID に関連付けられた IP アドレス
 
-    Raises:
-    - ValueError:
-        If the Discord ID is invalid or not found, an error is raised.
+    発生するもの:
+    - 値エラー:
+        Discord ID が無効であるか見つからない場合は、エラーが発生します
     """
-
+    
     # ユーザーデータを取得するための Discord API エンドポイント
     url = f"https://discord.com/api/v9/users/{discord_id}"
 
